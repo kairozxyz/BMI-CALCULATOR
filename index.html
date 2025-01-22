@@ -1,31 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- By Ali Aslan -->
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>BMI Calculator</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
     <div class="container">
-        <div class="bmi-card">
-            <h1 class="title">BMI Calculator</h1>
-            <form id="bmi-form">
-                <div class="input-group">
-                    <label for="weight">Weight (kg):</label>
-                    <input type="number" id="weight" placeholder="Enter weight" required>
-                </div>
-                <div class="input-group">
-                    <label for="height">Height (cm):</label>
-                    <input type="number" id="height" placeholder="Enter height" required>
-                </div>
-                <button type="submit" id="calculate-btn">Calculate</button>
-            </form>
-            <div class="result" id="bmi-result">
-                <p>Enter your details above to calculate your BMI.</p>
+        <div class="box">
+          <h1>BMI Calculator</h1>
+          <div class="content">
+
+
+            <div class="input">
+                <label for="height">Age</label>
+                <input type="text" class="text-input" id="age" autocomplete="off" required/>
             </div>
+
+            <div class="gender">
+
+                <label class="container">
+                    <input type="radio" name="radio" id="m"><p class="text">Male</p>
+                    <span class="checkmark"></span>
+                  </label>
+
+
+                <label class="container">
+                    <input type="radio" name="radio" id="f" ><p class="text">Female</p>
+                      <span class="checkmark"></span>
+                    </label>
+
+            </div>
+
+            <div class="containerHW">
+            <div class="inputH">
+              <label for="height">Height(cm)</label>
+              <input type="number" id="height" required>
+            </div>
+
+            <div class="inputW">
+              <label for="weight">Weight(kg)</label>
+              <input type="number" id="weight" required>
+            </div>
+          </div>
+
+            <button class="calculate" id="submit" onclick="calculate();">Calculate BMI</button>
+          </div>
+          <div class="result">
+            <p>Your BMI is</p>
+            <div id="result">00.00</div>
+            <p class="comment"></p>
+          </div>
+          <div class="footer"><a class="footer-text" target="_blank" href="https://myskypower.net/">By My Sky Power</a></div>
+        
+      
+
         </div>
-    </div>
-    <script src="script.js"></script>
+      </div>
+
+      <a href="#" target="_blank" class="linkDownload">Download Source Code(Not given)</a>
+
+
+      
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalText"></p>
+    </div></div>
+
+
+
+    
+<script src="script.js"></script>
+
 </body>
 </html>
